@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Especialidad: Conectividad y Redes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">🌐 Redes del futuro [4° Medio]</div>
+<ul class="nav-links">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#talleres">Módulos</a></li>
+<li><a href="#teoria">Fundamentos</a></li>
+<li><a href="#tutorial">Laboratorios</a></li>
+<li><a href="#soporte">Mesa de Ayuda</a></li>
+</ul>
+</nav>
+
+<header id="inicio">
+<div class="header-content">
+<h1>Conectividad y Redes</h1>
+<p>Infraestructura tecnológica, enrutamiento y administración de sistemas de telecomunicaciones</p>
+<a href="#tutorial" class="btn-primario">Ir a las Consolas Interactivas</a>
+</div>
+</header>
+
+<main>
+<section class="info">
+<h2>Área de Desempeño Profesional</h2>
+<p>La especialidad se enfoca en el diseño, implementación, configuración y mantenimiento de infraestructuras de redes de datos locales (LAN) y extendidas (WAN). Los estudiantes desarrollan competencias clave en la administración de dispositivos activos de red, la implementación de políticas de seguridad informática y la gestión de sistemas operativos de servidor para garantizar la disponibilidad y optimización de los recursos tecnológicos.</p>
+</section>
+
+<section id="talleres" class="modulos">
+<h2>Módulos Técnicos Obligatorios:</h2>
+<div class="grid-tarjetas">
+<div class="tarjeta">
+<div class="icono">🖥️</div>
+<h3>Enrutamiento y Conmutación</h3>
+<p>Configuración lógica de protocolos de enrutamiento y administración de switches de capa 2 y capa 3 mediante CLI.</p>
+</div>
+<div class="tarjeta">
+<div class="icono">🔒</div>
+<h3>Seguridad en Redes</h3>
+<p>Implementación de listas de control de acceso (ACL), seguridad de puertos (Port Security) y firewalls perimetrales.</p>
+</div>
+<div class="tarjeta">
+<div class="icono">🐍</div>
+<h3>Automatización de Redes</h3>
+<p>Desarrollo de scripts funcionales para la optimización de tareas administrativas y gestión de redes basadas en software.</p>
+</div>
+<div class="tarjeta">
+<div class="icono">🗄️</div>
+<h3>Sistemas Operativos de Servidor</h3>
+<p>Instalación, despliegue de servicios esenciales (DHCP, DNS, Active Directory) y asignación de permisos NTFS.</p>
+</div>
+</div>
+</section>
+
+<section id="teoria" class="teoria-zona">
+<h2>Fundamentos Teóricos de la Especialidad</h2>
+<p class="subtitulo">Marcos regulatorios y protocolos estándar esenciales en telecomunicaciones.</p>
+
+<div class="contenedor-teoria">
+<div class="bloque-osi">
+<h3>El Modelo de Referencia OSI</h3>
+<p>Estructura conceptual de siete capas que estandariza las funciones de abstracción de los protocolos de red:</p>
+
+<div class="pila-osi">
+<div class="capa-osi c7"><span>7</span> Aplicación (HTTP, FTP, DNS, SSH)</div>
+<div class="capa-osi c6"><span>6</span> Presentación (Cifrado, Sintaxis, Formatos)</div>
+<div class="capa-osi c5"><span>5</span> Sesión (Control y mantenimiento del diálogo)</div>
+<div class="capa-osi c4"><span>4</span> Transporte (Segmentación - TCP / UDP)</div>
+<div class="capa-osi c3"><span>3</span> Red (Enrutamiento lógico y Direcciones IP)</div>
+<div class="capa-osi c2"><span>2</span> Enlace de Datos (Direccionamiento Físico MAC / Switches)</div>
+<div class="capa-osi c1"><span>1</span> Física (Transmisión binaria, Cables UTP, Fibra Óptica, Señales)</div>
+</div>
+</div>
+
+<div class="bloque-ip">
+<h3>Direccionamiento Lógico e Infraestructura IP</h3>
+<p>Esquemas de direccionamiento indispensables para la localización de nodos dentro de una topología de red.</p>
+
+<table class="tabla-ip">
+<thead>
+<tr>
+<th>Métrica</th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Longitud de Bits</strong></td>
+<td>32 bits (Estructura decimal de 4 octetos)</td>
+<td>128 bits (Estructura hexadecimal de 8 segmentos)</td>
+</tr>
+<tr>
+<td><strong>Ejemplo de Host</strong></td>
+<td><code class="codigo-ip">192.168.10.1</code></td>
+<td><code class="codigo-ip">2001:db8:acad::1</code></td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>~4.3 millones de direcciones (Agotamiento global)</td>
+<td>Suficiente para asignar subredes masivas (340 sextillones)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="nota-subredes">
+<strong>Máscara de Subred:</strong> Máscara de bits que determina el prefijo de red y el espacio asignable para hosts de manera de segmentar dominios de difusión (Broadcast).
+</div>
+</div>
+</div>
+</section>
+
+<section id="tutorial" class="tutorial-zona">
+<h2>Zona de Simulación Técnica y Programación</h2>
+<p class="subtitulo">Selecciona el entorno de laboratorio. Los errores de sintaxis en cualquiera de las consolas restarán -10 XP de tu Score global.</p>
+
+<div class="tabs-contenedor">
+<button class="tab-btn activo" onclick="cambiarEntorno('cisco')">💻 Laboratorio Cisco IOS CLI</button>
+<button class="tab-btn" onclick="cambiarEntorno('python')">🐍 Lógica Condicional en Python</button>
+<div class="badge-puntos-global" id="score-badge">Score: <span id="score-valor">0</span> XP</div>
+</div>
+
+<div class="layout-laboratorio">
+
+<div class="fila-superior-lab">
+
+<div class="instrucciones-box" id="caja-instrucciones-main">
+<div class="header-instrucciones">
+<h3>Entorno: <span id="entorno-nombre">Cisco IOS</span></h3>
+<div class="fase-tag">Fase <span id="paso-numero">1</span> de <span id="paso-total">6</span></div>
+</div>
+<p id="instruccion-texto">
+El dispositivo ha inicializado en el <strong class="termino-glosario" onclick="consultarTermino('Modo EXEC Usuario')">Modo EXEC Usuario</strong>. Suba el nivel de privilegios ingresando al modo administrativo.
+</p>
+<div class="ayuda-comando">Sintaxis técnica requerida: <code id="comando-ayuda">enable</code></div>
+</div>
+
+<div class="glosario-box">
+<h3>📖 Diccionario Técnico de Soporte</h3>
+<p class="instruccion-glosario">Haz clic en conceptos resaltados o selecciona uno abajo:</p>
+<select id="selector-glosario" onchange="consultarTermino(this.value)">
+<option value="">-- Seleccionar término para analizar --</option>
+<option value="CLI">Interfaz de Línea de Comandos (CLI)</option>
+<option value="Modo EXEC Usuario">Modo EXEC Usuario</option>
+<option value="Modo EXEC Privilegiado">Modo EXEC Privilegiado</option>
+<option value="Configuración Global">Modo de Configuración Global</option>
+<option value="Interfaz Física">Interfaz Física</option>
+<option value="Input">Función input()</option>
+<option value="Estructura If">Sentencia if</option>
+<option value="Estructura Else">Sentencia else</option>
+</select>
+<div class="pantalla-glosario" id="pantalla-glosario">
+<span class="placeholder-glosario">Selecciona un concepto técnico para desplegar su definición académica...</span>
+</div>
+</div>
+</div>
+
+<div class="monitor-estado-box">
+<h3>📊 Estado de la Infraestructura Remota</h3>
+<div class="grid-monitor">
+<div class="campo-monitor"><strong>Hostname:</strong> <span id="mon-hostname">Router</span></div>
+<div class="campo-monitor"><strong>Modo / Entorno:</strong> <span id="mon-modo">EXEC Usuario</span></div>
+<div class="campo-monitor"><strong>Interfaz Fa0/0:</strong> <span id="mon-interfaz" style="color: #ef4444; font-weight: bold;">Administrativamente Down 🔴</span></div>
+<div class="campo-monitor"><strong>Estado Script:</strong> <span id="mon-script" style="color: #64748b;">Esperando Código condicional</span></div>
+</div>
+</div>
+
+<div class="consola-interactiva" id="marco-consola">
+<div class="consola-historial" id="consola-historial">
+<p class="linea-sistema">--- Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4, RELEASE SOFTWARE ---</p>
+<p class="linea-sistema">System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE</p>
+<p class="linea-sistema">Instruction: Ingrese la sintaxis técnica exacta para avanzar.</p>
+</div>
+<div class="consola-input-linea">
+<span class="prompt" id="consola-prompt">Router></span>
+<input type="text" id="consola-input" placeholder="Ingrese sintaxis de comando..." autofocus autocomplete="off">
+</div>
+</div>
+</div>
+</section>
+
+<section id="soporte" class="soporte-zona">
+<h2>Mesa de Ayuda (Helpdesk)</h2>
+<p>Registro formal de incidencias de red de la infraestructura corporativa.</p>
+<form class="formulario-soporte" onsubmit="event.preventDefault(); alert('Ticket registrado de manera exitosa en la cola del Administrador de Red.');">
+<div class="grupo-input">
+<label for="usuario">Técnico Analista:</label>
+<input type="text" id="usuario" placeholder="Ej: Administrador de Sistemas" required>
+</div>
+<div class="grupo-input">
+<label for="falla">Categoría del Incidente:</label>
+<select id="falla">
+<option value="ip">Conflicto de Dirección IP Duplicada (Capa 3)</option>
+<option value="fisico">Falla de Continuidad en Medio Físico / Cable Defectuoso (Capa 1)</option>
+<option value="dns">Falla en Resolución de Nombres de Dominio (DNS)</option>
+<option value="seguridad">Violación de Políticas de Acceso / Bloqueo por Firewall</option>
+</select>
+</div>
+<div class="grupo-input">
+<label for="detalles">Análisis del Síntoma:</label>
+<textarea id="detalles" rows="4" placeholder="Detalle los códigos de error, trazas de traceroute o comandos ping fallidos..."></textarea>
+</div>
+<button type="submit" class="btn-formulario">Registrar Incidente en Base de Datos</button>
+</form>
+</section>
+</main>
+
+<footer>
+<p>© 2026 - Departamento de Conectividad y Redes - Proyecto Académico Técnico</p>
+</footer>
+
+<script>
+const diccionario = {
+"CLI": "<strong>Command Line Interface:</strong> Entorno de texto utilizado para interactuar con el sistema operativo de un nodo de red mediante comandos estrictos.",
+"Modo EXEC Usuario": "<strong>Modo EXEC de Usuario:</strong> Nivel inicial de la CLI de Cisco (prompt '>'). Permite comandos limitados de diagnóstico básico.",
+"Modo EXEC Privilegiado": "<strong>Modo EXEC Privilegiado:</strong> Nivel administrativo de la CLI (prompt '#'). Concede acceso total a visualización y submodos.",
+"Configuración Global": "<strong>Modo de Configuración Global:</strong> Submodo estructural (prompt '(config)#') para realizar cambios globales o generales en todo el equipo.",
+"Interfaz Física": "<strong>Interfaz Física:</strong> Puerto o ranura de hardware real en un router o switch donde se conecta el cableado de red.",
+"Input": "<strong>input():</strong> Función nativa de Python que detiene la ejecución del script para esperar que el usuario escriba un dato por teclado y guardarlo en una variable.",
+"Estructura If": "<strong>if:</strong> Bloque condicional principal. Si la condición que tiene al lado es Verdadera (True), ejecuta el código que tiene adentro.",
+"Estructura Else": "<strong>else:</strong> Bloque de salida por defecto en Python. Se ejecuta automáticamente si ninguna de las condiciones previas del 'if' se cumplieron."
+};
+
+function consultarTermino(termino) {
+const pantalla = document.getElementById('pantalla-glosario');
+const selector = document.getElementById('selector-glosario');
+if (diccionario[termino]) {
+pantalla.innerHTML = `<p class="definicion-activa">${diccionario[termino]}</p>`;
+selector.value = termino;
+} else {
+pantalla.innerHTML = `<span class="placeholder-glosario">Selecciona un concepto técnico para desplegar su definición académica...</span>`;
+selector.value = "";
+}
+}
+
+const datosLaboratorios = {
+cisco: [
+{ numero: 1, instruccion: "El dispositivo ha inicializado en el <strong class='termino-glosario' onclick=\"consultarTermino('Modo EXEC Usuario')\">Modo EXEC Usuario</strong>. Suba el nivel de privilegios ingresando al modo administrativo.", comandoCorrecto: "enable", promptActual: "Router>", respuestaSistema: "Router#", puntos: 20 },
+{ numero: 2, instruccion: "Acceda al submodo jerárquico diseñado para modificar parámetros operativos del sistema completo, conocido como <strong class='termino-glosario' onclick=\"consultarTermino('Configuración Global')\">Configuración Global</strong>.", comandoCorrecto: "configure terminal", promptActual: "Router#", respuestaSistema: "Enter configuration commands, one per line. End with CNTL/Z.", puntos: 20 },
+{ numero: 3, instruccion: "Asigne el identificador lógico formal al dispositivo con la sintaxis exacta: <strong>hostname R1-Taller</strong>.", comandoCorrecto: "hostname R1-Taller", promptActual: "Router(config)#", respuestaSistema: "", puntos: 20 },
+{ numero: 4, instruccion: "Procederemos a configurar la capa física. Ingrese a la <strong class='termino-glosario' onclick=\"consultarTermino('Interfaz Física')\">Interfaz Física</strong> FastEthernet 0/0 digitando: <strong>interface fastethernet 0/0</strong>.", comandoCorrecto: "interface fastethernet 0/0", promptActual: "R1-Taller(config)#", respuestaSistema: "", puntos: 20 },
+{ numero: 5, instruccion: "Establezca la IP lógica de la puerta de enlace corporativa Clase C y su máscara escribiendo: <strong>ip address 192.168.10.1 255.255.255.0</strong>.", comandoCorrecto: "ip address 192.168.10.1 255.255.255.0", promptActual: "R1-Taller(config-if)#", respuestaSistema: "", puntos: 20 },
+{ numero: 6, instruccion: "Utilice la sentencia de control nativa de Cisco IOS para habilitar el puerto físico: <strong>no shutdown</strong>.", comandoCorrecto: "no shutdown", promptActual: "R1-Taller(config-if)#", respuestaSistema: "%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up\n%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up", puntos: 20 }
+],
+python: [
+{ numero: 1, instruccion: "Usa la función <strong class='termino-glosario' onclick=\"consultarTermino('Input')\">input()</strong> para preguntarle al usuario el estado de la red y guardarlo en una variable llamada 'estado': <strong>estado = input('¿Estado de la red?: ')</strong>.", comandoCorrecto: "estado = input('¿Estado de la red?: ')", promptActual: ">>>", respuestaSistema: "Variable de entrada mapeada. Lista para recibir respuestas.", puntos: 25 },
+{ numero: 2, instruccion: "Crea la primera condición usando <strong class='termino-glosario' onclick=\"consultarTermino('Estructura If')\">if</strong>. Si el estado es igual a 'caido', el script debe reaccionar. Escribe la cabecera: <strong>if estado == 'caido':</strong>.", comandoCorrecto: "if estado == 'caido':", promptActual: ">>>", respuestaSistema: "... (Esperando instrucción interna con indentación)", puntos: 25 },
+{ numero: 3, instruccion: "Indenta con 4 espacios e ingresa la respuesta que dará el programa si la red se cayó: <strong> print('Alerta: Revisar router principal')</strong>.", comandoCorrecto: " print('Alerta: Revisar router principal')", promptActual: "...", respuestaSistema: "Acción para caso 'caido' cargada.", puntos: 25 },
+{ numero: 4, instruccion: "Crea la salida por defecto usando <strong class='termino-glosario' onclick=\"consultarTermino('Estructura Else')\">else:</strong> para cualquier otra respuesta: <strong>else:</strong>.", comandoCorrecto: "else:", promptActual: ">>>", respuestaSistema: "... (Esperando respuesta final del bloque else)", puntos: 25 },
+{ numero: 5, instruccion: "Termina el programa con la respuesta indentada para cuando todo funcione bien: <strong> print('Red operativa sin problemas')</strong>.", comandoCorrecto: " print('Red operativa sin problemas')", promptActual: "...", respuestaSistema: "[Script Estructural Compilado]", puntos: 20 }
+]
+};
+
+let entornoActual = 'cisco';
+let indicesPasos = { cisco: 0, python: 0 };
+let scoreTotal = 0;
+let pythonModoPruebaReal = false; // Bandera para controlar el modo sandbox final
+
+const inputConsola = document.getElementById('consola-input');
+const historialConsola = document.getElementById('consola-historial');
+const promptConsola = document.getElementById('consola-prompt');
+const pasoNumeroTxt = document.getElementById('paso-numero');
+const pasoTotalTxt = document.getElementById('paso-total');
+const instruccionTxt = document.getElementById('instruccion-texto');
+const comandoAyudaTxt = document.getElementById('comando-ayuda');
+const scoreTxt = document.getElementById('score-valor');
+const cajaInstrucciones = document.getElementById('caja-instrucciones-main');
+const badgePuntos = document.getElementById('score-badge');
+const entornoNombreTxt = document.getElementById('entorno-nombre');
+const marcoConsola = document.getElementById('marco-consola');
+
+function cambiarEntorno(nuevoEntorno) {
+entornoActual = nuevoEntorno;
+
+const botones = document.querySelectorAll('.tab-btn');
+botones[0].classList.toggle('activo', nuevoEntorno === 'cisco');
+botones[1].classList.toggle('activo', nuevoEntorno === 'python');
+
+if (nuevoEntorno === 'python') {
+entornoNombreTxt.textContent = "Python 3 Scripting Terminal";
+marcoConsola.style.borderColor = "#3776ab";
+
+if(!pythonModoPruebaReal) {
+historialConsola.innerHTML = `<p class="linea-sistema">=== Python 3.10 Scripting (Lógica Condicional) ===</p><p class="linea-sistema">Escribe la secuencia lógica para que el script responda según los datos.</p>`;
+promptConsola.textContent = ">>>";
+} else {
+cargarModoPruebaPythonVisual();
+}
+
+document.getElementById('mon-modo').textContent = "Python Decision Logic";
+document.getElementById('mon-modo').style.color = "#3776ab";
+} else {
+entornoNombreTxt.textContent = "Cisco IOS CLI";
+marcoConsola.style.borderColor = "#1e293b";
+historialConsola.innerHTML = `<p class="linea-sistema">--- Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4 ---</p>`;
+promptConsola.textContent = "Router>";
+document.getElementById('mon-modo').textContent = "EXEC Usuario";
+document.getElementById('mon-modo').style.color = "#3b82f6";
+
+actualizarPromptCisco();
+}
+
+actualizarInterfazInstrucciones();
+}
+
+function actualizarPromptCisco() {
+if (entornoActual !== 'cisco') return;
+let idx = indicesPasos.cisco;
+if (idx === 0) promptConsola.textContent = "Router>";
+else if (idx === 1) promptConsola.textContent = "Router#";
+else if (idx === 2) promptConsola.textContent = "Router(config)#";
+else if (idx === 3) promptConsola.textContent = "R1-Taller(config)#";
+else if (idx >= 4) promptConsola.textContent = "R1-Taller(config-if)#";
+}
+
+function cargarModoPruebaPythonVisual() {
+historialConsola.innerHTML += `<p class="linea-sistema">🔄 [EJECUCIÓN DEL SCRIPT EN VIVO]</p>`;
+promptConsola.textContent = "";
+inputConsola.placeholder = "Prueba escribiendo 'caido' u 'ok' y presiona Enter...";
+inputConsola.disabled = false;
+
+const lineaPregunta = document.createElement('p');
+lineaPregunta.className = 'linea-sistema';
+lineaPregunta.textContent = "¿Estado de la red?: ";
+historialConsola.appendChild(lineaPregunta);
+}
+
+function actualizarInterfazInstrucciones() {
+if (entornoActual === 'python' && pythonModoPruebaReal) {
+pasoNumeroTxt.textContent = "¡En Vivo!";
+instruccionTxt.innerHTML = "<strong>[MODO INTERACTIVO]</strong> Tu script está corriendo. Ingresa un estado de prueba en la consola para ver cómo reacciona tu código condicional.";
+comandoAyudaTxt.textContent = "Ingresa 'caido' u 'ok' abajo";
+return;
+}
+
+const listaPasos = datosLaboratorios[entornoActual];
+const index = indicesPasos[entornoActual];
+
+pasoTotalTxt.textContent = listaPasos.length;
+
+if (index < listaPasos.length) {
+const paso = listaPasos[index];
+pasoNumeroTxt.textContent = paso.numero;
+instruccionTxt.innerHTML = paso.instruccion;
+comandoAyudaTxt.textContent = paso.comandoCorrecto;
+promptConsola.textContent = paso.promptActual;
+inputConsola.disabled = false;
+inputConsola.placeholder = "Ingrese sintaxis de comando...";
+cajaInstrucciones.style.borderColor = (entornoActual === 'cisco') ? '#2563eb' : '#3776ab';
+cajaInstrucciones.style.backgroundColor = '#eff6ff';
+} else {
+pasoNumeroTxt.textContent = "¡Completado!";
+if (entornoActual === 'python') {
+instruccionTxt.innerHTML = "<strong>[ETAPA DE ESCRITURA COMPLETA]</strong> El script se ha compilado con éxito. Pasando al entorno de ejecución real de inmediato...";
+comandoAyudaTxt.textContent = "Corriendo Sandbox";
+
+// Activar el simulador interactivo de Python automáticamente
+pythonModoPruebaReal = true;
+setTimeout(() => {
+cargarModoPruebaPythonVisual();
+actualizarInterfazInstrucciones();
+}, 1200);
+} else {
+instruccionTxt.innerHTML = `<strong>[ETAPA FINALIZADA]</strong> Desafío de ${entornoActual.toUpperCase()} resuelto con éxito en los registros lógicos.`;
+comandoAyudaTxt.textContent = "Módulo Concluido";
+inputConsola.disabled = true;
+inputConsola.placeholder = "Etapa completada con éxito.";
+}
+cajaInstrucciones.style.borderColor = '#10b981';
+cajaInstrucciones.style.backgroundColor = '#ecfdf5';
+}
+}
+
+inputConsola.addEventListener('keydown', function(e) {
+if (e.key === 'Enter') {
+const valorCrudo = inputConsola.value;
+const textoComando = valorCrudo.trim();
+if (textoComando === "" && !pythonModoPruebaReal) return;
+
+// LÓGICA ESPECIAL: Modo de prueba interactiva de Python corriendo
+if (entornoActual === 'python' && pythonModoPruebaReal) {
+// Mostrar lo que escribió el alumno
+const pUserResponse = document.createElement('p');
+pUserResponse.className = 'linea-usuario';
+pUserResponse.textContent = valorCrudo;
+historialConsola.appendChild(pUserResponse);
+
+// Ejecutar la lógica condicional armada en base al input
+const pOutputs = document.createElement('p');
+pOutputs.className = 'linea-sistema-ok';
+
+if (textoComando.toLowerCase() === 'caido') {
+pOutputs.textContent = "Alerta: Revisar router principal";
+} else {
+pOutputs.textContent = "Red operativa sin problemas";
+}
+historialConsola.appendChild(pOutputs);
+
+// Volver a preguntar para permitir múltiples pruebas consecutivas
+const lineaPregunta = document.createElement('p');
+lineaPregunta.className = 'linea-sistema';
+lineaPregunta.textContent = "¿Estado de la red?: ";
+historialConsola.appendChild(lineaPregunta);
+
+inputConsola.value = "";
+historialConsola.scrollTop = historialConsola.scrollHeight;
+return;
+}
+
+// Lógica regular de revisión de líneas del laboratorio
+const listaPasos = datosLaboratorios[entornoActual];
+let index = indicesPasos[entornoActual];
+if (index >= listaPasos.length) return;
+
+const paso = listaPasos[index];
+
+const pComando = document.createElement('p');
+pComando.className = 'linea-usuario';
+pComando.textContent = `${promptConsola.textContent} ${valorCrudo}`;
+historialConsola.appendChild(pComando);
+
+if (textoComando === paso.comandoCorrecto.trim() || valorCrudo === paso.comandoCorrecto) {
+scoreTotal += paso.puntos;
+scoreTxt.textContent = scoreTotal;
+
+badgePuntos.style.backgroundColor = "#10b981";
+setTimeout(() => badgePuntos.style.backgroundColor = "#0f172a", 400);
+
+const pRespuesta = document.createElement('p');
+pRespuesta.className = 'linea-sistema-ok';
+
+if(paso.respuestaSistema) {
+pRespuesta.innerHTML = `[✓ SUCCESS] <br>${paso.respuestaSistema.replace(/\n/g, '<br>')}`;
+} else {
+pRespuesta.innerHTML = `[✓ SUCCESS]`;
+}
+historialConsola.appendChild(pRespuesta);
+
+indicesPasos[entornoActual]++;
+
+if (entornoActual === 'cisco') {
+if (index === 0) { document.getElementById('mon-modo').textContent = "EXEC Privilegiado"; document.getElementById('mon-modo').style.color = "#3b82f6"; }
+if (index === 1) { document.getElementById('mon-modo').textContent = "Configuración Global"; document.getElementById('mon-modo').style.color = "#a855f7"; }
+if (index === 2) { document.getElementById('mon-hostname').textContent = "R1-Taller"; }
+if (index === 3) { document.getElementById('mon-modo').textContent = "Config-Interface (Fa0/0)"; document.getElementById('mon-modo').style.color = "#eab308"; }
+if (index === 5) {
+const intf = document.getElementById('mon-interfaz');
+intf.textContent = "Habilitada / Operativa 🟢"; intf.style.color = "#10b981";
+}
+actualizarPromptCisco();
+} else if (entornoActual === 'python') {
+if (index === 0) {
+document.getElementById('mon-script').textContent = "Escuchando teclado ⌨️";
+document.getElementById('mon-script').style.color = "#eab308";
+}
+if (index === 2) {
+document.getElementById('mon-script').textContent = "Estructura lógica abierta";
+}
+if (index === 4) {
+document.getElementById('mon-script').textContent = "Script listo para correr 🚀";
+document.getElementById('mon-script').style.color = "#10b981";
+}
+}
+
+actualizarInterfazInstrucciones();
+
+} else {
+scoreTotal -= 10;
+scoreTxt.textContent = scoreTotal;
+
+badgePuntos.style.backgroundColor = "#ef4444";
+setTimeout(() => badgePuntos.style.backgroundColor = "#0f172a", 500);
+
+const pError = document.createElement('p');
+pError.className = 'linea-sistema-error';
+pError.textContent = (entornoActual === 'cisco')
+? `% Error de Sintaxis CLI: Sentencia no válida. Comando estricto esperado: '${paso.comandoCorrecto}'`
+: `SyntaxError: Lógica de bloques inválida. Revisa los dos puntos (:) o espacios. Escribe tal cual: '${paso.comandoCorrecto}'`;
+historialConsola.appendChild(pError);
+}
+
+inputConsola.value = "";
+historialConsola.scrollTop = historialConsola.scrollHeight;
+}
+});
+
+actualizarInterfazInstrucciones();
+</script>
+</body>
+</html>
