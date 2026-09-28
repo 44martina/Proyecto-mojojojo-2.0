@@ -9,10 +9,20 @@
 --rojo-error: #f87171;
 }
 
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Regla indispensable para calcular anchos exactos sin desbordamiento */
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+html, body {
+max-width: 100%;
+overflow-x: hidden;
 margin: 0;
 padding: 0;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: #f8fafc;
 color: var(--texto-oscuro);
 scroll-behavior: smooth;
@@ -421,51 +431,15 @@ background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rg
 .btn-formulario:hover { background-color: var(--azul-cisco); }
 
 footer { background-color: var(--bg-principal); color: #94a3b8; text-align: center; padding: 1.5rem 1rem; margin-top: 5rem; }
+
 /* Adaptación para pantallas de Celular / Dispositivos Móviles */
 @media (max-width: 768px) {
 .navbar {
 flex-direction: column;
+align-items: center;
 gap: 1rem;
 padding: 1rem;
 text-align: center;
-}
-  /* 1. Prevenir desbordamiento horizontal global */
-html, body {
-max-width: 100%;
-overflow-x: hidden;
-margin: 0;
-padding: 0;
-}
-
-/* 2. Reglas para dispositivos móviles */
-@media (max-width: 768px) {
-/* Hacer que el contenedor principal use todo el ancho móvil */
-main, header, footer, .navbar, .contenedor-teoria {
-width: 100% !important;
-max-width: 100% !important;
-box-sizing: border-box !important;
-}
-
-/* Ajustar la barra de navegación para que no sobresalga */
-.navbar {
-flex-direction: column;
-align-items: center;
-padding: 1rem;
-}
-
-/* Hacer que las tablas tengan scroll horizontal si son muy anchas */
-table, .tabla-ip {
-display: block;
-width: 100% !important;
-overflow-x: auto;
-white-space: nowrap;
-}
-
-/* Evitar que las imágenes o bloques se salgan del marco */
-img, iframe, canvas, .consola-interactiva {
-max-width: 100% !important;
-box-sizing: border-box;
-}
 }
 
 .nav-links {
@@ -479,11 +453,17 @@ padding: 3rem 1rem;
 }
 
 .header-content h1 {
-font-size: 2rem;
+font-size: 1.8rem;
+word-break: break-word;
 }
 
 .header-content p {
 font-size: 1rem;
+}
+
+main, header, footer, .contenedor-teoria {
+width: 100% !important;
+max-width: 100% !important;
 }
 
 main {
@@ -494,6 +474,11 @@ padding: 1rem 0.8rem;
 grid-template-columns: 1fr;
 padding: 1.2rem;
 gap: 1.5rem;
+}
+
+.pila-osi, .tabla-ip, table {
+width: 100% !important;
+max-width: 100% !important;
 }
 
 .tabla-ip {
@@ -516,16 +501,16 @@ text-align: center;
 margin-left: 0;
 text-align: center;
 width: 100%;
-box-sizing: border-box;
 }
 
 .consola-interactiva {
 height: 320px;
 padding: 1rem;
+max-width: 100% !important;
 }
 
 .formulario-soporte {
 padding: 1.2rem;
+width: 100%;
 }
 }
-
