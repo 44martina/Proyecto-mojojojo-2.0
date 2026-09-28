@@ -429,6 +429,44 @@ gap: 1rem;
 padding: 1rem;
 text-align: center;
 }
+  /* 1. Prevenir desbordamiento horizontal global */
+html, body {
+max-width: 100%;
+overflow-x: hidden;
+margin: 0;
+padding: 0;
+}
+
+/* 2. Reglas para dispositivos móviles */
+@media (max-width: 768px) {
+/* Hacer que el contenedor principal use todo el ancho móvil */
+main, header, footer, .navbar, .contenedor-teoria {
+width: 100% !important;
+max-width: 100% !important;
+box-sizing: border-box !important;
+}
+
+/* Ajustar la barra de navegación para que no sobresalga */
+.navbar {
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+}
+
+/* Hacer que las tablas tengan scroll horizontal si son muy anchas */
+table, .tabla-ip {
+display: block;
+width: 100% !important;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+/* Evitar que las imágenes o bloques se salgan del marco */
+img, iframe, canvas, .consola-interactiva {
+max-width: 100% !important;
+box-sizing: border-box;
+}
+}
 
 .nav-links {
 flex-wrap: wrap;
